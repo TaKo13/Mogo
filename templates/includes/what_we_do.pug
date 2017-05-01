@@ -1,0 +1,46 @@
+-
+  var header = {
+    description: 'Service',
+    name: 'what we do',
+    note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
+
+  var quoteBlock = [
+    {
+      img: '../assets/images/svg/img_chat.svg',
+      text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”',
+      name: 'Jon Doe'
+    }
+  ]
+.what-we-do
+  +sectionHeader(header)
+  .wrap-info-block
+    .photographer
+      img.man(src="../assets/images/jpg/man_wall.jpg")
+    .block-with-descrip
+      .photography
+        img.img-photo(src="../assets/images/svg/picture_white.svg")
+        p.photography-title photography
+        img.arrow-top(src="../assets/images/svg/arrow_gray_top.svg")
+        .text-block
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .scroll-line
+      .creativity
+        p.creativity-title creativity
+        img.img-creativity(src="../assets/images/svg/equalizer.svg")
+        img.arrow-down(src="../assets/images/svg/arrow_gray_down.svg")
+      .web-design
+        p.web-title web design
+        img.img-web(src="../assets/images/svg/bullseye.svg")
+        img.arrow-down(src="../assets/images/svg/arrow_gray_down.svg")
+
+  .quotes-block
+    .quotes-block__prev-button
+    .quotes-block__slides
+        each quote in quoteBlock
+          .quotes-block__quote
+            .quotes-block__imges
+              img(src=quote.img)
+            .quotes-block__text= quote.text
+              .quotes-block__name= quote.name
+    .quotes-block__next-button

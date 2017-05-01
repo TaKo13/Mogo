@@ -1,0 +1,33 @@
+dash-style($border-color, $margin-top=37px)
+  content ''
+  display block
+  height 3px
+  width 60px
+  background $border-color
+  margin-left auto
+  margin-right auto
+  margin-top $margin-top
+
+.section-header
+  width minContentWidth
+  margin 0 auto
+  text-align center
+
+  &__description
+    font 24px KaushanScript
+
+  &__name
+    font bold 30px MainText
+    margin 5px 0 37px 0 
+    text-transform uppercase
+
+    &::after
+      dash-style(redDefault)
+      margin-bottom 45px
+
+  &__note
+    font 15px BasicText
+    color grayDefault
+    width 954px
+    margin 0 auto
+  

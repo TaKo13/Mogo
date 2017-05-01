@@ -1,0 +1,43 @@
+-
+    var header = {
+    description: 'Who we are',
+    name: 'Meet our team',
+    note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
+
+  var contentsMans = [
+    { image:'../assets/images/jpg/matthew_dix.jpg',
+      name:'Matthew Dix',
+      post:'Graphic Design'
+    },
+    { image:'../assets/images/jpg/christopher_campbell.jpg',
+      name:'Christopher Campbell',
+      post:'Branding/UX design'
+    },
+    { image:'../assets/images/jpg/michael_fertig.jpg',
+      name:'Michael Fertig',
+      post:'Developer'
+    }
+  ]
+
+.meet-our-team
+  +sectionHeader(header)
+  .block-with-people
+    each content in contentsMans
+      .block-with-people__content
+        .content__avatar-man
+          img(src=content.image)
+          .content__social-net
+            .facebk
+              +svgIcon("facebook-white")
+            .twitter
+              +svgIcon("twitter-red")
+            .pintr
+              +svgIcon("pinterest-red")
+            .instgr
+              +svgIcon("instagram-red")
+        .content__person
+          p.name= content.name
+          p.post= content.post
+  .meet-our-team__footer
+    img.hipster(src="../assets/images/png/hipster.png")

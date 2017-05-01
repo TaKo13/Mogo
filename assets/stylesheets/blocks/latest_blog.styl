@@ -1,0 +1,73 @@
+.latest-blog
+  padding-top 100px
+  
+  .latest-blog__blocks
+    display flex
+    justify-content space-between
+    width 1200px
+    margin 0 auto
+
+  .latest-blog__content
+    position relative
+    .photo
+      size(380px, 240px)
+
+    .date-icon
+      size(60px, 70px)
+      background limeDefault
+      display inline-block
+      position absolute
+      right 330px
+      top 160px
+
+      .num, 
+      .month
+        margin 0
+        margin-left 16px
+
+      .num
+        font bold 30px MainText
+        color white
+        margin-top 10px
+
+      .month
+        font italic 14px BasicText
+        color white
+        margin-top -3px
+        margin-left 22px
+
+    .theme,
+    .text
+      margin 0
+
+    .theme
+      font CaptionText
+      text-transform uppercase
+      margin-top 20px
+
+    .text
+      font italic 300 15px BasicText
+      color grayDefault
+      width 350px
+      margin-top 20px
+
+    .views_comments-block
+      width 380px
+      border-top 1px solid grayDefault
+      margin-top 15px
+
+      .views,
+      .comments,
+      .__counter
+        margin-top 20px
+
+      .views,
+      .comments
+        margin-right 9px
+
+      .__counter
+        display inline-block
+        margin 0
+        font italic 300 15px BasicText
+        color grayDefault
+        margin-right 20px

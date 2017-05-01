@@ -1,0 +1,116 @@
+.some-of-our-work
+  padding-top 100px
+
+.gallery-images
+  min-height minContentWidth * 0.4
+  height 40vw
+  max-height 780px
+  min-width minContentWidth
+  width 100vw
+  max-width maxContentWidth
+  display flex
+  flex-wrap wrap
+  flex-direction column
+  margin-top 110px
+
+  &__block
+    position relative
+    max-height 50%
+    width 25%
+    cursor pointer
+    overflow: hidden
+
+    &:nth-child(5)
+      max-height 100%
+
+    img
+      max-width 100%
+
+    &::before
+      content ''
+      position absolute
+      display block
+      top 0
+      left 0
+      right 0
+      bottom 0
+      opacity 0
+      background deafualtGradient
+      transition opacity .3s ease-in
+
+
+    &:hover
+      &::before
+        opacity .9
+
+    &:hover
+      & ^[0]__hover-picture
+        opacity 1
+
+    ^[0]__hover-picture
+      centred-block()
+      size(165px, 92px)
+      background url(../images/svg/picture_lime.svg) no-repeat 50% 0
+      padding-top 40px
+      opacity 0
+      text-transform uppercase
+      font 14px MainText
+      text-align center
+      line-height 24px
+      color white
+      transition all .3s ease-in .1s
+
+    ^[0]__text
+      font italic 300 15px BasicText
+      text-transform none
+      margin 0
+
+      
+
+
+.quotes-slider
+  display flex
+  align-items center
+  width 1152px
+  margin 100px auto 0
+
+  &__prev-button
+    size(15px, 22px)
+    background url(../images/svg/arrow_gray_left.svg) no-repeat
+
+  &__quote
+    display flex
+    align-items center
+    width 1128px
+
+  &__avatar
+    width 210px
+    margin-left 45px
+
+  &__text
+    font italic 300 24px BasicText
+    color grayDefault
+    width 770px
+    margin-left 30px
+    margin-top 35px
+
+  &__name
+    font 24px KaushanScript
+    width 300px
+    color black
+    margin-left 70px
+    margin-top 20px
+
+    &::after
+      content ''
+      width 60px
+      border-top 3px solid redDefault
+      margin-left -190px
+      margin-top 15px
+      position absolute
+
+  &__next-button
+    size(15px, 22px)
+    background url(../images/svg/arrow_gray_right.svg) no-repeat
+
+

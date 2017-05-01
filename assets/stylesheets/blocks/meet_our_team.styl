@@ -1,0 +1,97 @@
+.meet-our-team
+  padding-top 100px
+
+.block-with-people
+  display flex
+  justify-content center
+  margin-top 95px
+
+  &__content
+    margin-right 30px
+    display flex
+    flex-wrap wrap
+    flex-direction column
+    align-items center 
+
+.content
+  &__avatar-man
+    position relative
+    display block
+    cursor pointer
+    width 380px
+    height 470px
+    transition all .3s ease-in .1s
+    gradientOverlay()
+
+    &:hover ^[-1]__social-net
+      opacity 1
+
+  &__social-net
+    $social-net-square-size = 56px
+    $social-net-counter = 4
+    centred-block()
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+    width $social-net-square-size * $social-net-counter + $social-net-counter - 1
+    // ДОбавляем по 1px между блоками
+    margin 0 auto 
+    z-index $z-index-overlay + 1
+    opacity 0
+    transition opacity .3s ease-in .1s
+
+    .facebk
+    .twitter
+    .pintr
+    .instgr
+      size($social-net-square-size)
+      background yellowDefault
+      display flex
+      justify-content center
+      align-items center
+      transition background .3s ease-in .1s
+
+      .facebook-white,
+      .twitter-red,
+      .pinterest-red,
+      .instagram-red
+        fill redDefault
+        transition fill .3s ease-in .1s
+      
+      .facebook-white
+        size(13px,18px)
+      .twitter-red
+        size(26px,22px)
+      .pinterest-red
+        size(26px, 21px)
+      .instagram-red
+        size(26px, 26px)
+
+      &:hover
+        background redDefault
+        .facebook-white,
+        .twitter-red,
+        .pinterest-red,
+        .instagram-red
+          fill white
+
+
+.name
+  font CaptionText
+  text-transform uppercase
+
+.post
+  font italic 300 15px BasicText
+  color grayDefault
+  margin 0
+  text-align center
+
+.meet-our-team__footer
+  position relative
+  size(100%, 250px)
+  background lightGrayDefault
+  margin-top 118px
+
+  .hipster
+    centred-block()

@@ -1,0 +1,81 @@
+.about-us
+  padding-top 88px
+
+  &__images
+    display flex
+    width minContentWidth - 10 // 10px для блоков со смещающимися элементами
+    justify-content space-between
+    margin 105px auto 0
+
+  &__footer
+    width 100%
+    height 270px
+    background limeDefault
+    text-align center
+    margin-top 110px
+
+    ul 
+      margin 0 auto
+      width 1214px
+      display block
+      padding 0
+      li
+        height 270px
+        width 239px
+        list-style-type none
+        display inline-block
+        text-align center
+        border-left 1px limeLigth solid
+        margin 0
+        box-sizing border-box
+        color #fff
+        
+      li:last-child
+        border-right 1px limeLigth solid
+
+      li 
+        p
+          margin 0
+          margin-top 69px
+          display inline-block
+          width 100%
+          font bold 72px MainText
+
+          &:last-child
+            margin-top 21px
+            display inline-block
+            width 100%
+            font CaptionText
+
+
+.img-container
+
+  h = 250px
+  w = 380px
+  t = 94px
+
+  height h
+  position relative
+  display inline-block
+  cursor pointer
+  transition all .3s ease-in .1s
+  gradientOverlay()
+
+  &:hover
+    .hover-icon
+      opacity 1
+
+  .hover-icon
+    position absolute
+    left (w/2)
+    top t
+    transform translateX(-50%)
+    background url(../images/svg/icon_super_team.svg) no-repeat 50% 0%
+    size(121px, 48px)
+    opacity 0
+    transition all .3s ease-in .1s
+    color #fff
+    text-align center
+    font bold 18px/78px MainText
+    text-transform uppercase
+    z-index 2

@@ -1,0 +1,154 @@
+.main-block
+  height 1000px
+  position relative
+  background-size cover
+  color: #fff
+  opacity-mask("../images/jpg/eagle.jpg", linear-gradient(to top, #efd889, #ea8a83), .1)
+
+header
+  position relative
+  margin 0 auto 
+  top 20px
+  max-width 100%
+  width 1200px
+  clearfix()
+  z-index 9
+
+  .logotype
+    position absolute
+    display inline-block
+    font bold 30px MainText
+
+.menu
+  position absolute
+  right -4px
+  top 12px
+  display inline-block
+  width 622px
+
+  &__item
+    display inline-block
+    height 20px
+    margin-right 56px
+    text-decoration none
+    font 14px MainText
+    color #fff
+    transition color .3s linear
+    cursor pointer
+
+    &:hover
+      color yellowDefault
+
+    &._active
+      color yellowDefault
+
+      &::after
+        content ''
+        display block
+        size(100%, 2px)
+        background yellowDefault
+        margin-top 10px
+        transition background .3s ease-in
+
+  .shopping-cart
+    display inline-block
+    size(18px, 15px)
+    margin-right 42px
+    position relative
+    top 2px
+    cursor pointer
+    fill white
+
+  .magnifying-glass
+    display inline-block
+    size(18px, 18px)
+    position relative
+    top 2px
+    margin-right 0
+    cursor pointer
+    fill white
+
+  :hover
+    fill yellowDefault
+    transition fill .3s ease-in
+
+
+.main-title
+  width 850px
+  position relative
+  top 231px
+  margin 0 auto
+  z-index 1
+
+  h1, h2
+    position relative
+    text-align center
+    margin 0 auto
+
+  h1
+    font-family KaushanScript
+    font-size 72px
+    bottom 22px
+
+  h2
+    font-family MainText
+    font-size 150px
+    line-height 140px
+    letter-spacing 1px
+
+  .button
+    margin-top 50px
+
+  .dash
+    dash-style(#fff)
+    margin 63px auto 0 
+
+.slider
+  position absolute
+  bottom 0
+  left 50%
+  transform translateX(-50%)
+  width minContentWidth
+  height 67px
+  text-align center
+
+  a
+    display inline-block
+    position relative
+    bottom 6px
+    height 67px
+    width 280px
+    border-top 3px rgba(255, 255, 255, 0.5) solid
+    color rgba(255, 255, 255, 0.7)
+    text-align left
+    cursor pointer
+    transition all .2s ease-in
+
+    &::after
+      content ''
+      position absolute
+      top -3px
+      width 70px
+      border-top 3px solid redDefault
+      transform scaleX(0)
+      transform-origin 0 0
+      transition transform .3s ease-in
+
+    &:not(:last-child) 
+      margin-right 30px
+
+    p
+      font bold 24px MainText
+      cursor pointer
+      margin 18px 0 0 0
+
+      span 
+        font 18px MainText
+        text-transform uppercase
+
+    &:hover
+      border-top 3px #fff solid
+      color #fff
+
+      &::after
+        transform scaleX(1)

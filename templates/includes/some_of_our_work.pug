@@ -1,0 +1,55 @@
+-
+  // Символ '-' минус означает использование js в разметке
+  var images = [
+    "../assets/images/jpg/rectangle_pict.jpg",
+    "../assets/images/jpg/rectangle_pict3.jpg",
+    "../assets/images/jpg/rectangle_pict2.jpg",
+    "../assets/images/jpg/rectangle_pict4.jpg",
+    "../assets/images/jpg/rectangle_pict5_big.jpg",
+    "../assets/images/jpg/rectangle_pict6.jpg",
+    "../assets/images/jpg/rectangle_pict7.jpg"
+  ]
+
+  var quoteSlides = [
+    {
+      img: '../assets/images/jpg/avatar.jpg',
+      text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”',
+      name: 'Joshua Earle'
+    }
+    //- {
+    //-   img: '../assets/images/jpg/avatar.jpg',
+    //-   text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”',
+    //-   name: 'Joshua Earle'
+    //- },
+    //- {
+    //-   img: '../assets/images/jpg/avatar.jpg',
+    //-   text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”',
+    //-   name: 'Joshua Earle'
+    //- }
+  ]
+  var header = {
+    description: 'What we do',
+    name: 'some of our work',
+    note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
+
+.some-of-our-work#work
+  +sectionHeader(header)
+
+  .gallery-images
+    each image in images
+      .gallery-images__block
+        img(src=image)
+        .gallery-images__hover-picture creatively designed
+          p.gallery-images__text Lorem ipsum dolor sit
+
+  .quotes-slider
+    .quotes-slider__prev-button
+    .quotes-slider__slides
+        each quote in quoteSlides
+          .quotes-slider__quote
+            img.quotes-slider__avatar(src=quote.img)
+            .quotes-slider__text= quote.text
+              .quotes-slider__name= quote.name
+    .quotes-slider__next-button
+    

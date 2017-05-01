@@ -1,0 +1,52 @@
+-
+  var services = [
+    {
+      "title": "Photography",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "img": "../assets/images/svg/alarm.svg"
+    },
+     {
+      "title": "Web Design",
+      "text": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "img": "../assets/images/svg/line_graph.svg"
+    },
+    {
+      "title": "Creativity",
+      "text": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "img": "../assets/images/svg/computer_ok.svg"
+    },
+    {
+      "title": "Seo",
+      "text": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      "img": "../assets/images/svg/book2.svg"
+    },
+    {
+      "title": "Css/Html",
+      "text": "Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.",
+      "img": "../assets/images/svg/home.svg"
+    },
+    {
+      "title": "Digital",
+      "text": "Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "img": "../assets/images/svg/digital_icon.svg"
+    }
+  ]
+
+  var header = {
+    description: 'We work with',
+    name: 'amazing services'
+  }
+
+mixin serviceDescription(services)
+  each service in services
+    .content-blocks__description
+      img.content_blocks__icon(src=service.img)
+      .text-block
+        p.title= service.title
+        p.text= service.text
+
+.amazing-services#service
+  +sectionHeader(header)
+
+  .content-blocks
+    +serviceDescription(services)

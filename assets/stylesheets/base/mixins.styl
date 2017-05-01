@@ -1,0 +1,53 @@
+translateXY($h, $v)
+  transform translate($h, $v)
+
+centred-block()
+  position absolute 
+  translateXY(-50%, -50%)
+  left 50%
+  top 50%
+
+size(w, h = false)
+  width w
+  if (!h)
+    height w
+  else
+    height h
+
+// картинка с наложением
+opacity-mask($url, $color=#fff, $opacity=.15)
+  background: $color
+  &:before
+    content ''
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background url($url) no-repeat center
+    opacity $opacity
+
+parameters-header-text()
+  font 14px MainText
+  color darkGray
+  text-transform uppercase
+
+gradientOverlay()
+  &::after
+    content ''
+    position absolute
+    display block
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index $z-index-overlay
+    opacity 0
+    transition opacity .3s ease-in
+    background deafualtGradient
+  &:hover
+    shift = 10px
+    transform: translate(-(shift), -(shift))
+    box-shadow: shift shift 0 0 limeDefault
+    &::after
+      opacity .9

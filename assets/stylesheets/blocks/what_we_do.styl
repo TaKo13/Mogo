@@ -1,0 +1,185 @@
+.what-we-do
+  padding-top 113px
+
+  .section-header
+    margin-bottom 90px
+
+  .wrap-info-block
+    width 1200px
+    height 380px
+    margin 0 auto 120px auto
+
+    .photographer
+      display inline-block
+
+    .block-with-descrip
+      // background #ffffcc
+      width 600px
+      position relative
+      bottom 384px
+      left 570px
+      margin-left 30px
+
+      .photography
+        size(600px, 232px)
+        border 1px grayDefault solid
+        box-sizing content-box
+
+        .img-photo
+          display inline-block
+          position relative
+          top 15px
+          bottom 15px
+          left 16px
+
+        .photography-title
+          position relative
+          bottom -4px
+          left 30px
+          text-transform uppercase
+          display inline-block
+          width 120px
+          margin 0
+          font CaptionText
+
+        .arrow-top
+          display inline-block
+          position relative
+          left 410px
+          top 4px
+
+        .text-block
+          border-top 1px grayDefault solid
+          margin: 25px 0px -3px 0px
+          padding-left 20px
+          padding-right 50px
+          font italic 300 15px  BasicText
+          color grayDefault 
+
+        .scroll-line
+          background url("../images/svg/vertical_scroll_gray.svg") no-repeat
+          height 140px
+          width 5px
+          margin 0
+          position relative
+          display inline-block
+          background-color #f5f5f5
+          bottom 130px
+          left 551px
+          border-radius 2px
+
+          &::after
+            content ''
+            display block
+            position absolute
+            width 5px
+            height 90px
+            background url("../images/svg/vertical_scroll_lime.svg") no-repeat limeDefault
+            border-radius 2px
+
+      .creativity
+        size(600px, 60px)
+        margin-top 10px
+        border 1px grayDefault solid
+        box-sizing content-box
+
+        .img-creativity
+          display inline-block
+          position relative
+          top 15px
+          bottom 15px
+          right 104px
+          
+        .creativity-title
+          position relative
+          top 5px
+          left 60px
+          text-transform uppercase
+          display inline-block
+          width 120px
+          margin 0
+          font CaptionText
+
+        .arrow-down
+          position relative;
+          left 411px
+          top 5px
+
+      .web-design
+        size(600px, 60px)
+        margin-top 10px
+        border 1px grayDefault solid
+        box-sizing content-box
+
+        .img-web
+          display inline-block
+          position relative
+          top 15px
+          bottom 15px
+          right 104px
+
+        .web-title
+          position relative
+          top 5px
+          left 60px
+          text-transform uppercase
+          display inline-block
+          width 120px
+          margin 0
+          font CaptionText
+
+        .arrow-down
+          position relative
+          left 407px
+          top 5px
+
+  .quotes-block
+    size(auto, 290px)
+    background lightGrayDefault
+    display flex
+    align-items center
+    justify-content center
+    margin 100px auto 0
+
+    &__prev-button
+      size(15px, 22px)
+      background url(../images/svg/arrow_gray_left.svg) no-repeat
+
+    &__quote
+      display flex
+      align-items center
+      width 1128px
+
+    &__imges
+      border 3px solid limeDefault
+      size(150px, 150px)
+      margin-left 75px
+
+      img
+        margin 45px 43px 
+
+    &__text
+      font italic 300 24px BasicText
+      color grayDefault
+      width 770px
+      margin-left 60px
+      margin-top 5px
+
+    &__name
+      font 24px KaushanScript
+      width 300px
+      color black
+      margin-left 70px
+      margin-top 20px
+
+      &::after
+        content ''
+        width 60px
+        border-top 3px solid redDefault
+        margin-left -150px
+        margin-top 15px
+        position absolute
+
+    &__next-button
+      size(15px, 22px)
+      background url(../images/svg/arrow_gray_right.svg) no-repeat

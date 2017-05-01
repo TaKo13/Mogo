@@ -1,0 +1,6 @@
+mixin sectionHeader($header)
+  .section-header
+    h2.section-header__description= $header.description
+    h3.section-header__name= $header.name
+    if $header.note
+      p.section-header__note= $header.note
