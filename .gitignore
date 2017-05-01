@@ -86,6 +86,7 @@ jspm_packages
 *.css
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
